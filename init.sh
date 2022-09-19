@@ -8,6 +8,7 @@ if [ $? -eq 1 ]; then
   brew install gum
 fi
 
+echo "Choose your adventure...(ctrl-c twice to exit)"
 declare -a INSTALL_APPS=("fd" "procs" "bat" "exa" "sd" "dust" "starship" "ripgrep" "tokei" "hyperfine" "bottom" "navi" "nushell" "delta" "zoxide" "grex" "bandwhich")
 SELECTED_APPS=$(gum choose --no-limit "${INSTALL_APPS[@]}")
 SELECTED_LEN=${#SELECTED_APPS[@]}
